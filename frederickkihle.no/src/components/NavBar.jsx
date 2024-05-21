@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 
-    // Array containting navigation items
+    // Array containing navigation items
     const navItems = [
         { id: 1, text: 'Commercial', endpoint: '/commercial' },
         { id: 2, text: 'Portraits', endpoint: '/portrait' },
