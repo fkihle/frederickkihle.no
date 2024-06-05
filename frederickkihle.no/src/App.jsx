@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import CommercialPage from './components/CommercialPage';
-import ContactPage from './components/ContactPage';
 import { Footer } from './components/Footer';
 import Header from './components/Header';
-import HomePage from './components/HomePage';
-import MusiciansPage from './components/MusiciansPage';
-import NotFound from './components/NotFound';
-import PortraitPage from './components/PortraitPage';
-import ProductPage from './components/ProductPage';
+import CommercialPage from './pages/CommercialPage';
+import ContactPage from './pages/ContactPage';
+import HomePage from './pages/HomePage';
+import MusiciansPage from './pages/MusiciansPage';
+import NotFound from './pages/NotFound';
+import PortraitPage from './pages/PortraitPage';
+import ProductPage from './pages/ProductPage';
 
 function App() {
   return (

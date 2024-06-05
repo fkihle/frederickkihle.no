@@ -2,12 +2,12 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from "react";
-import ContactForm from "./ContactForm";
+import ContactForm from "../components/ContactForm";
 library.add(fas)
 
 const ContactPage = () => {
     return (
-        <div className="flex-col content-center px-4 py-2 mt-16">
+        <div className="flex-col content-center px-4 py-2">
             <div>
 
                 <ul className=" my-4 max-w-lg mx-auto p-4 border rounded-md shadow-md bg-white">

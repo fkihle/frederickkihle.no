@@ -1,26 +1,31 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-import NavBar from "./NavBar";
+import { Link } from "react-router-dom";
+import FKlogo from '../images/logo_white.png';
 
 const Header = () => {
-
-    const headerStyle = "p-4 m-2 font-coldiac";
-    const linkStyle = "cursor-pointer duration-300 hover:text-white";
-
+        // Array containing navigation items
+        const navItems = [
+            { id: 1, text: 'Commercial', endpoint: '/commercial' },
+            { id: 2, text: 'Portraits', endpoint: '/portrait' },
+            { id: 3, text: 'Musicians', endpoint: '/musicians' },
+            { id: 4, text: 'Product', endpoint: '/product' },
+        ];
+        
     return (
         <>
-            <div className='w-screen h-auto border-b border-gray-400 flex justify-center text-gray-400 z-10'>
+            <div className='w-screen h-auto opacity-75 flex flex-wrap justify-center items-center sticky font-coldiacItalic top-0 p-4 z-10 bg-zinc-900'>
+                <Link to='/'>
+                    <img src={FKlogo} alt="Fotograf Frederick Kihle" className="w-48"/>
+                </Link>
         
-            {/* Site Navigation */}
-
-            <ul className='flex w-full justify-between items-center'>
-                <li className={`${headerStyle} ${linkStyle}`}><Link to="/">Frederick Kihle '85</Link></li>
-                <li className={`${headerStyle}`}>Commercial & Portrait Photographer</li>
-                <li className={`${headerStyle} ${linkStyle}`}><Link to="/contact">Check Availability</Link></li>
-            </ul>
-
+            <div className="flex flex-wrap w-full justify-center">
+                {navItems.map(item => (
+                    <span key={item.id}>
+                        <Link to={item.endpoint}><span className="text-white text-xl m-2 hover:underline">{item.text}</span></Link>
+                    </span>
+                ))}
             </div>
-            <NavBar />
+        </div>
         </>
     );
 };

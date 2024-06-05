@@ -1,5 +1,8 @@
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 import React from "react";
 import { Link } from 'react-router-dom';
+library.add(fas);
 
 const NavBar = () => {
 
@@ -11,20 +14,15 @@ const NavBar = () => {
         { id: 4, text: 'Product', endpoint: '/product' },
     ];
 
-    const navStyle = "p-4 m-2 cursor-pointer duration-300 font-coldiac text-gray-400 hover:text-white";
-
     return (
-        <div className='w-screen h-14 flex justify-center top-0 sticky z-20'>
+        <div className="font-coldiacItalic float-right mr-9 z-20">
         
-            {/* Site Navigation */}
-            <ul className='flex text-right items-center'>
-                {navItems.map(item => (
-                    <li key={item.id}>
-                        <Link to={item.endpoint}><span className={navStyle}>{item.text}</span></Link>
-                    </li>
-                ))}
-            </ul>
-
+            {navItems.map(item => (
+                <span key={item.id}>
+                    <Link to={item.endpoint}><span className="text-white m-4">{item.text}</span></Link>
+                </span>
+            ))}
+        
         </div>
     );
 };

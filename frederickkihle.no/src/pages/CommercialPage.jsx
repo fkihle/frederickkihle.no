@@ -1,0 +1,29 @@
+import React from "react";
+import Clientlogos from '../components/Clientlogos';
+import Thumbnails from '../components/Thumbnails';
+
+// Dynamically import all images from a directory
+function importAll(r) {
+    return r.keys().map(r);
+}
+
+// Import all images from /images/commercial
+const images = importAll(require.context('../images/commercial', false, /\.(png|jpe?g)$/));
+
+// Import all images from /images/commercial
+const logos = importAll(require.context('../logos', false, /\.(png|jpe?g)$/));
+
+const CommercialPage = () => {
+    return (
+        <>
+            <div class="columns-2 md:columns-3 lg:columns-4">
+                <Thumbnails images={images} />
+            </div>
+            <div className="border-t">
+                <Clientlogos images={logos} />
+            </div>
+        </>
+    )
+};
+
+export default CommercialPage;

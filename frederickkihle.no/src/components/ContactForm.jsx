@@ -39,7 +39,7 @@ const ContactForm = () => {
     };
 
     const formLabelStyle = "block text-gray-700 font-bold mb-2";
-    const formInputStyle = "w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500";
+    const formInputStyle = "w-full p-2 border rounded-md outline-none ring-1 ring-teal-300 focus:outline-none focus:ring-2 focus:ring-teal-500";
 
     return (
         <form onSubmit={sendEmail} className="max-w-lg mx-auto p-4 border rounded-md shadow-md bg-white">

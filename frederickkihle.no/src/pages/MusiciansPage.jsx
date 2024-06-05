@@ -1,5 +1,5 @@
 import React from "react";
-import Thumbnails from './Thumbnails';
+import Thumbnails from '../components/Thumbnails';
 
 // Dynamically import all images from a directory
 function importAll(r) {
@@ -11,7 +11,9 @@ const images = importAll(require.context('../images/musicians', false, /\.(png|j
 
 const MusiciansPage = () => {
     return (
-        <Thumbnails images={images} />
+        <div class="columns-2 md:columns-3 lg:columns-4">
+            <Thumbnails images={images} />
+        </div>
     )
 };
 
