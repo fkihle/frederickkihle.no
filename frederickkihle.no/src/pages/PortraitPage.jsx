@@ -11,9 +11,15 @@ const images = importAll(require.context('../images/portraits', false, /\.(png|j
 
 const PortraitPage = () => {
     return (
-        <div class="columns-2 md:columns-3 lg:columns-4">
-            <Thumbnails images={images} />
-        </div>
+        <>
+            <div className="my-4 max-w-lg mx-auto p-4 border-x rounded-md shadow-md font-bold text-center text-white">
+                    Portraits
+            </div>
+            <div class="columns-2 md:columns-3 lg:columns-4">
+                <Thumbnails images={images} />
+            </div>
+
+        </>
     )
 };
 

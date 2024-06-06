@@ -16,12 +16,16 @@ const logos = importAll(require.context('../logos', false, /\.(png|jpe?g)$/));
 const CommercialPage = () => {
     return (
         <>
+            <div className="my-4 max-w-lg mx-auto p-4 border-x rounded-md shadow-md font-bold text-center text-white">
+                Commercial work
+            </div>
             <div class="columns-2 md:columns-3 lg:columns-4">
                 <Thumbnails images={images} />
             </div>
-            <div className="border-t">
+            <div className="">
                 <Clientlogos images={logos} />
             </div>
+            
         </>
     )
 };

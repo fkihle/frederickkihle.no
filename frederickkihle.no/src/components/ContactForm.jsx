@@ -4,6 +4,11 @@ import { useState } from "react";
 const ContactForm = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [stateMessage, setStateMassage] = useState(null);
+    const [myCategory, setMyCategory] = useState("commercial");
+
+    const handleChange = (event) => {
+        setMyCategory(event.target.value)
+    }
 
     const sendEmail = (e) => {
         e.persist();
@@ -60,6 +65,15 @@ const ContactForm = () => {
                     required 
                     className={formInputStyle}
                 />
+            </div>
+            <div className="mb-4">
+                <label className={formLabelStyle} htmlFor="user_category">Category</label>
+                <select value={myCategory} onChange={handleChange} className={formInputStyle}>
+                    <option value="commercial">Commercial</option>
+                    <option value="portrait">Portrait</option>
+                    <option value="product">Product</option>
+                    <option value="other">Other</option>
+                </select>
             </div>
             <div className="mb-4">
                 <label className={formLabelStyle} htmlFor="user_tel">Phone</label>

@@ -11,9 +11,14 @@ const images = importAll(require.context('../images/musicians', false, /\.(png|j
 
 const MusiciansPage = () => {
     return (
-        <div class="columns-2 md:columns-3 lg:columns-4">
-            <Thumbnails images={images} />
-        </div>
+        <>
+            <div className="my-4 max-w-lg mx-auto p-4 border-x rounded-md shadow-md font-bold text-center text-white">
+                    Musicians and Concerts
+            </div>
+            <div class="columns-2 md:columns-3 lg:columns-4">
+                <Thumbnails images={images} />
+            </div>
+        </>
     )
 };
 
