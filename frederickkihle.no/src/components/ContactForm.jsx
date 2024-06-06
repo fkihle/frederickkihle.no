@@ -43,11 +43,12 @@ const ContactForm = () => {
             e.target.reset();
     };
 
-    const formLabelStyle = "block text-gray-700 font-bold mb-2";
+    const formLabelStyle = "block text-gray-300 font-bold mb-2";
     const formInputStyle = "w-full p-2 border rounded-md outline-none ring-1 ring-teal-300 focus:outline-none focus:ring-2 focus:ring-teal-500";
 
     return (
-        <form onSubmit={sendEmail} className="max-w-lg mx-auto p-4 border rounded-md shadow-md bg-white">
+        <form onSubmit={sendEmail} className="my-4 max-w-lg mx-auto p-4 border-x rounded-md shadow-md font-bold text-white">
+        {/* <form onSubmit={sendEmail} className="max-w-lg mx-auto p-4 border rounded-md shadow-md bg-white"> */}
             <div className="mb-4">
                 <label className={formLabelStyle} htmlFor="user_name">Name</label>
                 <input 
@@ -95,7 +96,7 @@ const ContactForm = () => {
                     type="submit" 
                     value={isSubmitting ? "Sending..." : "Send"} 
                     disabled={isSubmitting} 
-                    className={`w-full p-2 bg-teal-500 text-white rounded-md ${isSubmitting ? "opacity-50 cursor-not-allowed" : "hover:bg-teal-600"}`}
+                    className={`w-full p-2 cursor-pointer bg-neutral-800 text-white rounded-md ${isSubmitting ? "opacity-50 cursor-not-allowed" : "hover:bg-neutral-600"}`}
                 />
             </div>
             {stateMessage && (

@@ -8,7 +8,7 @@ function importAll(r) {
 }
 
 // Import all images from /images/commercial
-const images = importAll(require.context('../images/commercial', false, /\.(png|jpe?g)$/));
+const images = importAll(require.context('../images/commercial/thmbs', false, /\.(png|jpe?g)$/));
 
 // Import all images from /images/commercial
 const logos = importAll(require.context('../logos', false, /\.(png|jpe?g)$/));

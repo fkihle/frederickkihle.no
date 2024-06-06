@@ -7,7 +7,7 @@ function importAll(r) {
 }
 
 // Import all images from /images/commercial
-const images = importAll(require.context('../images/musicians', false, /\.(png|jpe?g)$/));
+const images = importAll(require.context('../images/musicians/thmbs', false, /\.(png|jpe?g)$/));
 
 const MusiciansPage = () => {
     return (

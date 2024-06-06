@@ -7,7 +7,7 @@ function importAll(r) {
 }
 
 // Import all images from /images/products
-const images = importAll(require.context('../images/products', false, /\.(png|jpe?g)$/));
+const images = importAll(require.context('../images/products/thmbs', false, /\.(png|jpe?g)$/));
 
 const ProductPage = () => {
     return (

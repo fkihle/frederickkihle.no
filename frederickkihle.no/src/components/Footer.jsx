@@ -7,7 +7,7 @@ export const Footer = () => {
     return (
         <>
         <div className="w-full flex justify-center content-center opacity-75 py-4 bg-neutral-800 border-gray-400 ">
-                <div className="font-coldiacItalic text-gray-400">
+                <div className=" text-gray-400">
                     &copy; {today.getFullYear()} Fotograf Frederick Kihle.
 
                 </div>

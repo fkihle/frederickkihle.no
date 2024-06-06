@@ -7,7 +7,7 @@ function importAll(r) {
 }
 
 // Import all images from /images/commercial
-const images = importAll(require.context('../images/portraits', false, /\.(png|jpe?g)$/));
+const images = importAll(require.context('../images/portraits/thmbs', false, /\.(png|jpe?g)$/));
 
 const PortraitPage = () => {
     return (

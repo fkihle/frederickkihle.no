@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ContactButton from './components/ContactButton';
 import { Footer } from './components/Footer';
 import Header from './components/Header';
 import CommercialPage from './pages/CommercialPage';
@@ -27,7 +26,6 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
 
-      <ContactButton />
 
       <Footer />
     </BrowserRouter>
