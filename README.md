@@ -1,1 +1,0 @@
-# frederickkihle.no

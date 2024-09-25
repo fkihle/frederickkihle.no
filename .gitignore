@@ -1,3 +1,8 @@
+# REMOVE THE OLD STUFF
+/public
+/src
+/tailwind.config.js
+
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -22,26 +27,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-#####################
-# frederickkihle.no #
-#####################
-
-# dependencies
-frederickkihle.no/node_modules
-frederickkihle.no/.pnp
-
-# testing
-frederickkihle.no/coverage
-
-# production
-frederickkihle.no/build
-
-# misc
-frederickkihle.no/npm-debug.log*
-frederickkihle.no/yarn-debug.log*
-frederickkihle.no/yarn-error.log*
-
-# images
-frederickkihle.no/src/images
-/img
